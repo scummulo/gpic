@@ -1,0 +1,37 @@
+/*!
+Theme Name: GPIC
+Author: juan.jimenez
+Author URI: https://github.com/scummulo
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: gpic
+Tags:
+*/
+
+/* Settings */
+@import "settings/config";
+@import "settings/fonts";
+
+/* Tools */
+
+/* Generic */
+@import "generic/reset";
+
+/* Elements */
+@import "elements/forms";
+@import "elements/sections";
+@import "elements/buttons";
+
+/* Objects */
+@import "objects/grid";
+@import "objects/transitions";
+@import "objects/slider";
+
+/* Components */
+@import "components/header";
+@import "components/footer";
+@import "components/home";
+@import "components/page-template";
+
+/* Trumps */

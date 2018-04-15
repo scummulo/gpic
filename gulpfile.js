@@ -14,7 +14,7 @@ var browserSync = require('browser-sync');
 
 // ******************** Change this
 // Variables
-var themeName = 'aiate';
+var themeName = 'gpic';
 var serverAlias = 'http://localhost:8888/';
 
 // Paths

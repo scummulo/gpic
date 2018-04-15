@@ -1,0 +1,68 @@
+// Buttons
+button {
+  border: 0;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 100;
+  font-size: 0.7rem;
+  cursor: pointer;
+  transition: 0.3s all;
+
+  input {
+    background: no-repeat;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 100;
+    font-size: 0.7rem;
+    color: #fff;
+
+    + span {
+      display: none !important;
+    }
+  }
+
+  &.primary {
+    background-color: $color-primary;
+    color: #fff;
+
+    &:hover {
+      background-color: lighten($color-primary, 10%);
+    }
+  }
+
+  &.secondary {
+    background-color: $color-secondary;
+
+    &:hover {
+      background-color: lighten($color-secondary, 10%);
+    }
+  }
+
+  &.tertiary {
+    background-color: $color-tertiary;
+    color: #fff;
+
+    &:hover {
+      background-color: lighten($color-tertiary, 10%);
+    }
+  }
+}
+
+// Error
+div.wpcf7-response-output {
+  background: #333;
+  border: 0 !important;
+  color: white;
+  padding: 15px !important;
+  margin: 15px 0 !important;
+  font-size: 12px;
+}
+
+span.wpcf7-not-valid-tip {
+  margin-top: 5px;
+  font-size: 10px !important;
+}

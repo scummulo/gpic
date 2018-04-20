@@ -12,7 +12,9 @@
 				<div>
 					<h3><span>Contacto</span>¿Quieres ponerte en contacto con nosotros?</h3>
 					<p>sbo@gpic.es</p>
-					<p>954285612 <a href=""><i class="gpic-twitter-logo-silhouette"></i></a> <a href=""><i class="gpic-linkedin-logo"></i></a></p>
+					<p>954285612
+					<!-- <a href=""><i class="gpic-twitter-logo-silhouette"></i></a> -->
+					<a href="https://www.linkedin.com/company/gpic-s.l/" target="_blank"><i class="gpic-linkedin-logo"></i></a></p>
 					<p> Avenida Blas Infante nº 6 <br>
 							Edificio Urbis, Planta 10, A <br>
 							41011 Sevilla <br></p>

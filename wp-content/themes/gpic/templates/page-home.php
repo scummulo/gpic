@@ -39,41 +39,54 @@
         </div>
     </section>
 
-    <section class="services">
+    <section class="solutions">
         <div class="container">
-            <div class="services__title">
-                <h3><span>Ofrecemos</span>Servicios</h3>
-                <p>Nuestro negocio se centra en los servicios en el contexto de las tecnologías de la información y de las comunicaciones.</p>
+            <div class="solutions__title">
+                <h3><span>Aportamos</span>Soluciones</h3>
+                <p>Ofrecemos a nuestros clientes soluciones personalizadas que abarcan desde la microinformática y las infraestructuras de telecomunicaciones, hasta los entornos de alta disponibilidad.</p>
             </div>
+
             <div class="row">
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                    <a href="/servicios-gestionados/">
-                        <i class="gpic-computer"></i>
-                        <h4>Servicios gestionados</h4>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+                    <a href="./data-center/">
+                        <i class="gpic-cloud-computings"></i>
+                        <h4>Data center</h4>
                     </a>
                 </div>
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                    <a href="/servicios-por-uso/">
-                        <i class="gpic-toner"></i>
-                        <h4>Servicios por uso</h4>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+                    <a href="./virtualizacion/">
+                        <i class="gpic-server"></i>
+                        <h4>Virtualización</h4>
                     </a>
                 </div>
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                    <a href="#">
-                        <i class="gpic-laptop"></i>
-                        <h4>Infraestructura de telecomunicaciones</h4>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+                    <a href="./puesto-de-trabajo-y-help-desk/">
+                        <i class="gpic-personal-computer"></i>
+                        <h4>Puesto de trabajo y help desk</h4>
                     </a>
                 </div>
-                <div class="col-sm-12 col-md-6 col-lg-8">
-                    <a href="#">
-                        <i class="gpic-serveres"></i>
-                        <h4>Despliegues y migraciones</h4>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+                    <a href="./impresion/">
+                        <i class="gpic-printer"></i>
+                        <h4>Impresión</h4>
                     </a>
                 </div>
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                    <a href="#">
-                        <i class="gpic-settings"></i>
-                        <h4>Mantenimiento</h4>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+                    <a href="./seguridad/">
+                        <i class="gpic-databases"></i>
+                        <h4>Seguridad</h4>
+                    </a>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+                    <a href="./soluciones-cloud/">
+                        <i class="gpic-cloud-computing"></i>
+                        <h4>Soluciones cloud</h4>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                    <a href="./big-data/">
+                        <i class="gpic-database"></i>
+                        <h4>Big data</h4>
                     </a>
                 </div>
             </div>
@@ -92,54 +105,51 @@
         </div>
     </section>  
 
-    <section class="solutions">
+    <section class="coverage">
         <div class="container">
-            <div class="solutions__title">
-                <h3><span>Aportamos</span>Soluciones</h3>
-                <p>Ofrecemos a nuestros clientes soluciones personalizadas que abarcan desde la microinformática y las infraestructuras de telecomunicaciones, hasta los entornos de alta disponibilidad.</p>
+            <div class="coverage__title">
+                <h3><span>Prestamos</span>Cobertura</h3>
+                <p>La red de asistencia dispone en la actualidad de presencia/acuerdos en más de 130 centros en España y Portugal, distribuidos por provincias en tres niveles de implantación: capitales de comunidades y de provincia, núcleos urbanos de segundo orden y poblaciones medias.</p>
             </div>
+            <img src="<?php bloginfo('template_url'); ?>/dist/assets/img/mapa-cobertura.png" alt="mapa-cobertura">
+        </div>
+    </section>
 
+    <section class="services">
+        <div class="container">
+            <div class="services__title">
+                <h3><span>Ofrecemos</span>Servicios</h3>
+                <p>Nuestro negocio se centra en los servicios en el contexto de las tecnologías de la información y de las comunicaciones.</p>
+            </div>
             <div class="row">
-                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
-                    <a href="#">
-                        <i class="gpic-cloud-computings"></i>
-                        <h4>Data center</h4>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <a href="./servicios-gestionados/">
+                        <i class="gpic-computer"></i>
+                        <h4>Servicios gestionados</h4>
                     </a>
                 </div>
-                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
-                    <a href="#">
-                        <i class="gpic-server"></i>
-                        <h4>Virtualización</h4>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <a href="./servicios-por-uso/">
+                        <i class="gpic-toner"></i>
+                        <h4>Servicios por uso</h4>
                     </a>
                 </div>
-                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
-                    <a href="#">
-                        <i class="gpic-personal-computer"></i>
-                        <h4>Puesto de trabajo y help desk</h4>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <a href="./infraestructura-de-telecomunicaciones/">
+                        <i class="gpic-laptop"></i>
+                        <h4>Infraestructura de telecomunicaciones</h4>
                     </a>
                 </div>
-                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
-                    <a href="#">
-                        <i class="gpic-printer"></i>
-                        <h4>Impresión</h4>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <a href="./despliegues-y-migraciones/">
+                        <i class="gpic-serveres"></i>
+                        <h4>Despliegues y migraciones</h4>
                     </a>
                 </div>
-                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
-                    <a href="#">
-                        <i class="gpic-databases"></i>
-                        <h4>Seguridad</h4>
-                    </a>
-                </div>
-                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
-                    <a href="#">
-                        <i class="gpic-cloud-computing"></i>
-                        <h4>Soluciones cloud</h4>
-                    </a>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-12">
-                    <a href="#">
-                        <i class="gpic-database"></i>
-                        <h4>Big data</h4>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <a href="./mantenimiento/">
+                        <i class="gpic-settings"></i>
+                        <h4>Mantenimiento</h4>
                     </a>
                 </div>
             </div>

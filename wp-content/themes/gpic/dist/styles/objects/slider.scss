@@ -113,21 +113,11 @@
   &__arrows {
     position: absolute;
     bottom: 0;
-    width: 50%;
     right: 0;
     height: 70px;
     z-index: 1;
-    background-color: #ffffff;
     -webkit-touch-callout: none;
     user-select: none;
-
-    @media (max-width: 992px) {
-      width: 80%;
-    }
-
-    @media (max-width: 768px) {
-      width: 95%;
-    }
   }
 
   &__arrow {

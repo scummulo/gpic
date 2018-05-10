@@ -7,8 +7,8 @@
 
  get_header(); ?>
 
-    <div class="page-template">
-        <div class="page__image" style="background-image: url('<?php the_post_thumbnail_url()?>')">
+    <div class="page-template two">
+        <div class="page__header">
             <div class="page__title">
                 <?php the_title( '<h1>', '</h1>' ); ?>
             </div>  

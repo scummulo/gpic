@@ -25,7 +25,10 @@
                     <?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
                     <li class="glide__slide">
                         <div class="slide">
-                            <div class="image" style="background-image: url('<?php the_post_thumbnail_url()?>')"></div>
+                            <!-- <div class="image" style="background-image: url('<?php the_post_thumbnail_url()?>')"></div> -->
+                            <div class="img">
+                                <img src="<?php the_post_thumbnail_url()?>" alt="">
+                            </div>
                             <div class="featured container">
                                 <h2><?php the_title(); ?></h2>
                             </div> 
@@ -42,53 +45,25 @@
     <section class="solutions">
         <div class="container">
             <div class="solutions__title">
-                <h3><span>Aportamos</span>Soluciones</h3>
-                <p>Ofrecemos a nuestros clientes soluciones personalizadas que abarcan desde la microinformática y las infraestructuras de telecomunicaciones, hasta los entornos de alta disponibilidad.</p>
+                <h3><span><?php the_field('solutions__subtitle'); ?></span><?php the_field('solutions__title'); ?></h3>
+                <p><?php the_field('solutions__description'); ?></p>
             </div>
-
             <div class="row">
-                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
-                    <a href="./data-center/">
-                        <i class="gpic-cloud-computings"></i>
-                        <h4>Data center</h4>
-                    </a>
-                </div>
-                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
-                    <a href="./virtualizacion/">
-                        <i class="gpic-server"></i>
-                        <h4>Virtualización</h4>
-                    </a>
-                </div>
-                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
-                    <a href="./puesto-de-trabajo-y-help-desk/">
-                        <i class="gpic-personal-computer"></i>
-                        <h4>Puesto de trabajo y help desk</h4>
-                    </a>
-                </div>
-                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
-                    <a href="./impresion/">
-                        <i class="gpic-printer"></i>
-                        <h4>Impresión</h4>
-                    </a>
-                </div>
-                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
-                    <a href="./seguridad/">
-                        <i class="gpic-databases"></i>
-                        <h4>Seguridad</h4>
-                    </a>
-                </div>
-                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
-                    <a href="./soluciones-cloud/">
-                        <i class="gpic-cloud-computing"></i>
-                        <h4>Soluciones cloud</h4>
-                    </a>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                    <a href="./big-data/">
-                        <i class="gpic-database"></i>
-                        <h4>Big data</h4>
-                    </a>
-                </div>
+                <?php
+                    $loop = new WP_Query( array(
+                        'post_type' => 'solutions',
+                        'posts_per_page' => -1
+                        )
+                    );
+                ?>
+                <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+                        <a href="<?php the_permalink(); ?>">
+                            <i class="<?php the_field('solution__icon'); ?>"></i>
+                            <h4><?php the_title(); ?></h4>
+                        </a>
+                    </div>
+                <?php endwhile; wp_reset_query(); ?>
             </div>
         </div>
     </section>
@@ -97,9 +72,9 @@
         <div class="container">
             <div class="services__title">
                 <h3>
-                    <span>Motivos</span>
-                    Tres razones para<br>confiar en nosotros:
-                    <span class="typewrite" data-period="2000" data-type='[ "experiencia", "solvencia técnica", "capacidad de servicio" ]'></span>
+                    <span><?php the_field('reasons__subtitle'); ?></span>
+                    <?php the_field('reasons__title'); ?>
+                    <span class="typewrite" data-period="2000" data-type='[ "<?php the_field('reasons__one'); ?>", "<?php the_field('reasons__two'); ?>", "<?php the_field('reasons__three'); ?>" ]'></span>
                 </h3>
             </div>
         </div>
@@ -108,53 +83,62 @@
     <section class="coverage">
         <div class="container">
             <div class="coverage__title">
-                <h3><span>Prestamos</span>Cobertura</h3>
-                <p>La red de asistencia dispone en la actualidad de presencia/acuerdos en más de 130 centros en España y Portugal, distribuidos por provincias en tres niveles de implantación: capitales de comunidades y de provincia, núcleos urbanos de segundo orden y poblaciones medias.</p>
+                <h3><span><?php the_field('coverage__subtitle'); ?></span><?php the_field('coverage__title'); ?></h3>
+                <p><?php the_field('coverage__description'); ?></p>
             </div>
-            <img src="<?php bloginfo('template_url'); ?>/dist/assets/img/mapa-cobertura.png" alt="mapa-cobertura">
+            <img src="<?php the_field('coverage__image'); ?>" alt="mapa-cobertura">
         </div>
     </section>
 
     <section class="services">
         <div class="container">
             <div class="services__title">
-                <h3><span>Ofrecemos</span>Servicios</h3>
-                <p>Nuestro negocio se centra en los servicios en el contexto de las tecnologías de la información y de las comunicaciones.</p>
+                <h3><span><?php the_field('services__subtitle'); ?></span><?php the_field('services__title'); ?></h3>
+                <p><?php the_field('services__description'); ?></p>
             </div>
             <div class="row">
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                    <a href="./servicios-gestionados/">
-                        <i class="gpic-computer"></i>
-                        <h4>Servicios gestionados</h4>
-                    </a>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                    <a href="./servicios-por-uso/">
-                        <i class="gpic-toner"></i>
-                        <h4>Servicios por uso</h4>
-                    </a>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                    <a href="./infraestructura-de-telecomunicaciones/">
-                        <i class="gpic-laptop"></i>
-                        <h4>Infraestructura de telecomunicaciones</h4>
-                    </a>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                    <a href="./despliegues-y-migraciones/">
-                        <i class="gpic-serveres"></i>
-                        <h4>Despliegues y migraciones</h4>
-                    </a>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                    <a href="./mantenimiento/">
-                        <i class="gpic-settings"></i>
-                        <h4>Mantenimiento</h4>
-                    </a>
-                </div>
+                <?php
+                    $loop = new WP_Query( array(
+                        'post_type' => 'services',
+                        'posts_per_page' => -1
+                        )
+                    );
+                ?>
+                <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <a href="<?php the_permalink(); ?>">
+                            <i class="<?php the_field('service__icon'); ?>"></i>
+                            <h4><?php the_title(); ?></h4>
+                        </a>
+                    </div>
+                <?php endwhile; wp_reset_query(); ?>
             </div>
         </div>
     </section>
+
+    <?php
+        $loop = new WP_Query( array(
+            'post_type' => 'partners',
+            'posts_per_page' => -1
+            )
+        );
+        if ( $loop->have_posts() ) { 
+    ?>
+        <section class="partners">
+            <div class="container">
+                <div class="row">
+
+                    <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                        <div class="col">
+                            <a href="<?php the_field('partner__url') ?>">
+                                <img src="<?php the_post_thumbnail_url() ?>" alt="partner">
+                            </a>
+                        </div>
+                    <?php endwhile; wp_reset_query(); ?>
+                </div>
+            </div>
+        </section>
+    <?php } ?>
 
  <?php
  get_footer();

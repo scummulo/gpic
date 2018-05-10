@@ -83,14 +83,23 @@ $(document).ready(function() {
     type: "carousel",
     beforeInit: function(data) {
       setTimeout(function() {
+        $(".active img").css("transform", "scale(1.06)");
+      }, 100);
+      setTimeout(function() {
         $(".active .featured").css("opacity", "1");
       }, 300);
     },
     beforeTransition: function(data) {
       $(".active .featured").css("opacity", "0");
+      $(".active img").css("transform", "scale(1.0)");
     },
     afterTransition: function(data) {
-      $(".active .featured").css("opacity", "1");
+      setTimeout(function() {
+        $(".active img").css("transform", "scale(1.06)");
+      }, 100);
+      setTimeout(function() {
+        $(".active .featured").css("opacity", "1");
+      }, 300);
     }
   });
 });

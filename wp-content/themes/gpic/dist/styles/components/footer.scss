@@ -4,68 +4,171 @@ footer {
   color: #fff;
   background-color: #1f1f1f;
 
-  [class*="__title"] {
+  .footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 
-    h3 {
-      position: relative;
-      display: inline-block;
-      font-size: 30px;
-      max-width: 500px;
-      font-weight: 600;
-      line-height: 1.15;
-      padding-left: 50px;
-      margin: 0;
+    .contact {
+      @media (max-width: 992px) {
+        flex: 0 0 100%;
+      }
 
-      span {
-        &:first-child {
-          position: absolute;
-          top: 0;
-          left: -32px;
-          -webkit-transform: rotate(-90deg) translateX(-100%);
-          transform: rotate(-90deg) translateX(-100%);
-          margin-bottom: 0;
-          font-size: 12px;
-          text-transform: uppercase;
-          font-weight: 800;
+      h3 {
+        position: relative;
+        display: inline-block;
+        font-size: 30px;
+        max-width: 500px;
+        font-weight: 600;
+        line-height: 1.15;
+        padding-left: 50px;
+        margin: 0;
+
+        span {
+          &:first-child {
+            position: absolute;
+            top: 0;
+            left: -32px;
+            -webkit-transform: rotate(-90deg) translateX(-100%);
+            transform: rotate(-90deg) translateX(-100%);
+            margin-bottom: 0;
+            font-size: 12px;
+            text-transform: uppercase;
+            font-weight: 800;
+          }
+        }
+      }
+
+      p {
+        padding-left: 50px;
+        max-width: 800px;
+        color: $color-primary;
+        font-size: 30px;
+        font-weight: 600;
+        margin: 0;
+
+        a {
+          margin-left: 20px;
+          font-size: 20px;
+          transition: 0.2s all ease;
+
+          &:hover {
+            color: $color-primary;
+          }
+
+          &:first-child {
+            position: relative;
+            top: 2px;
+          }
+
+          + a {
+            margin-left: 10px;
+          }
+        }
+
+        + p {
+          margin-top: 30px;
+          color: #fff;
+          font-size: 14px;
+          font-weight: 400;
         }
       }
     }
 
-    p {
-      padding-left: 50px;
-      max-width: 800px;
-      color: $color-primary;
-      font-size: 30px;
-      font-weight: 600;
-      margin: 0;
+    .info {
+      @media (max-width: 992px) {
+        flex: 0 0 100%;
+        margin-top: 30px;
+      }
 
-      a {
-        margin-left: 20px;
-        font-size: 20px;
-        transition: 0.2s all ease;
+      .certifications {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 30px 0;
 
-        &:hover {
-          color: $color-primary;
+        @media (max-width: 992px) {
+          justify-content: flex-start;
+          padding-left: 50px;
         }
 
-        &:first-child {
-          position: relative;
-          top: 2px;
-        }
+        img {
+          height: 60px;
+          margin-right: 30px;
 
-        + a {
-          margin-left: 10px;
+          &:last-child {
+            margin-right: 0;
+          }
         }
       }
 
-      + p {
-        margin-top: 30px;
-        color: #fff;
-        font-size: 14px;
-        font-weight: 400;
+      .links {
+        ul {
+          text-align: right;
+
+          @media (max-width: 992px) {
+            text-align: left;
+            padding-left: 50px;
+          }
+
+          li {
+            display: inline-block;
+            margin-right: 30px;
+
+            @media (max-width: 992px) {
+              display: block;
+            }
+
+            a {
+              font-size: 14px;
+              transition: 0.3s all ease;
+
+              &:hover {
+                opacity: 0.7;
+              }
+            }
+
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Cookies
+#cookie-notice {
+  background-color: #1f1f1f !important;
+
+  .cookie-notice-container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    span {
+      font-size: 13px;
+      display: block;
+      line-height: 1.1;
+      margin-bottom: 15px;
+    }
+
+    a {
+      border: 0 !important;
+      background-color: #1f3891 !important;
+      background-image: none !important;
+      font-size: 13px !important;
+      line-height: 1.1 !important;
+      padding: 8px 20px !important;
+      box-shadow: none !important;
+
+      @media (max-width: 992px) {
+        margin-bottom: 10px!important;
+
+        &:last-child {
+          margin-bottom: 0!important;
+        }
       }
     }
   }

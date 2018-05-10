@@ -17,10 +17,8 @@ body {
 
     @media (min-width: 768px) {
       opacity: 0;
-      animation: fadeInUp 0.75s ease forwards 0.25s;
-      -webkit-animation: fadeInUp 0.75s ease forwards 0.25s;
-      -webkit-transform-origin: center 20%;
-      transform-origin: center 20%;
+      animation: fadeIn 0.8s ease forwards 0.25s;
+      -webkit-animation: fadeIn 0.8s ease forwards 0.25s;
     }
   }
 }

@@ -1058,3 +1058,13 @@ input[type="text"] {
   background-color: rgba(0,0,0,0.25);
 }
 
+.acceptance {
+  margin: 5px 0 30px;
+
+  span {
+    font-size: 12px;
+    margin: 0;
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+}

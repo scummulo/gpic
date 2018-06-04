@@ -78,7 +78,37 @@
                 </h3>
             </div>
         </div>
-    </section>  
+    </section>
+
+    <?php
+        $loop = new WP_Query( array(
+            'post_type' => 'post',
+            'posts_per_page' => 3,
+            'category_name' => 'home'
+            )
+        );
+        if ( $loop->have_posts() ) {
+    ?>
+
+    <section class="posts">
+        <div class="container">
+            <div class="posts__title">
+                <h3><span><?php the_field('posts__subtitle'); ?></span><?php the_field('posts__title'); ?></h3>
+                <p><?php the_field('posts__description'); ?></p>
+            </div>
+            <div class="row">
+                <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <a href="<?php the_permalink(); ?>">
+                            <h4><?php the_title(); ?></h4>
+                            <p><?php the_excerpt(); ?></p>
+                        </a>
+                    </div>
+                <?php endwhile; wp_reset_query(); ?>
+            </div>
+        </div>
+    </section>
+    <?php } ?>
 
     <section class="coverage">
         <div class="container">
@@ -127,7 +157,6 @@
         <section class="partners">
             <div class="container">
                 <div class="row">
-
                     <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
                         <div class="col">
                             <a href="<?php the_field('partner__url') ?>">

@@ -201,3 +201,14 @@
     }
   }
 }
+
+// Posts
+.posts {
+  .row {
+    [class*="col"] {
+      h4 {
+        font-size: 18px;
+      }
+    }
+  }
+}

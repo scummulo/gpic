@@ -1,37 +1,24 @@
 <?php
 /**
- * Template part for displaying posts
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package gpic
+ * @package GPIC
  */
 
-?>
+ get_header(); ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php
+    <div class="page-template two">
+        <div class="page__header">
+            <div class="page__title">
+			<?php
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
 		else :
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
-
-		if ( 'post' === get_post_type() ) :
-			?>
-			<div class="entry-meta">
-				<?php
-				gpic_posted_on();
-				gpic_posted_by();
-				?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
-
-	<?php gpic_post_thumbnail(); ?>
-
-	<div class="entry-content">
+		?>
+            </div>  
+        </div>
+        <div class="page__content">
 		<?php
 		the_content( sprintf(
 			wp_kses(
@@ -51,9 +38,8 @@
 			'after'  => '</div>',
 		) );
 		?>
-	</div><!-- .entry-content -->
+        </div>
+    </div>
+ <?php
 
-	<footer class="entry-footer">
-		<?php gpic_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+

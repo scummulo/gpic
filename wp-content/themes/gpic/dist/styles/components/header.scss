@@ -6,6 +6,7 @@ header {
   top: 20px;
   z-index: 99999;
   opacity: 0;
+  transition: .5s;
   animation: fadeIn 1s ease forwards .5s;
   -webkit-animation: fadeIn 1s ease forwards .5s;
 

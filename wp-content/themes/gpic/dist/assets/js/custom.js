@@ -102,4 +102,19 @@ $(document).ready(function() {
       }, 300);
     }
   });
+
+//   var prevScrollpos = window.pageYOffset;
+// window.onscroll = function() {
+//   var currentScrollPos = window.pageYOffset;
+//   if (prevScrollpos > currentScrollPos) {
+//     document.getElementById("header").style.top = "0";
+//     document.getElementById("logo-img").style.height = "40px";
+//     document.getElementById("header").style.backgroundColor = "#1f3891";
+//   } else {
+//     document.getElementById("header").style.top = "-60px";
+//     document.getElementById("logo-img").style.height = "60px";
+//     document.getElementById("header").style.backgroundColor = "transparent";
+//   }
+//   prevScrollpos = currentScrollPos;
+// }
 });

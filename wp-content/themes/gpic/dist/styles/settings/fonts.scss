@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'gpic';
-  src:  url('./dist/assets/fonts/gpic.eot?q91m8j');
-  src:  url('./dist/assets/fonts/gpic.eot?q91m8j#iefix') format('embedded-opentype'),
-    url('./dist/assets/fonts/gpic.ttf?q91m8j') format('truetype'),
-    url('./dist/assets/fonts/gpic.woff?q91m8j') format('woff'),
-    url('./dist/assets/fonts/gpic.svg?q91m8j#gpic') format('svg');
+  src:  url('./dist/assets/fonts/gpic.eot?2x96rx');
+  src:  url('./dist/assets/fonts/gpic.eot?2x96rx#iefix') format('embedded-opentype'),
+    url('./dist/assets/fonts/gpic.ttf?2x96rx') format('truetype'),
+    url('./dist/assets/fonts/gpic.woff?2x96rx') format('woff'),
+    url('./dist/assets/fonts/gpic.svg?2x96rx#gpic') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,6 +24,21 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.gpic-folders:before {
+  content: "\e917";
+}
+.gpic-crm2:before {
+  content: "\e918";
+}
+.gpic-catalog2:before {
+  content: "\e919";
+}
+.gpic-catalog:before {
+  content: "\e91a";
+}
+.gpic-crm:before {
+  content: "\e91b";
+}
 .gpic-twitter-logo-silhouette:before {
   content: "\e915";
 }
